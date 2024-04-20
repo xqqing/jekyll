@@ -1,14 +1,29 @@
+---
+#q:增加YAML front matter，告诉Jekyll处理页面中的Liquid语法
+#q:添加自定义字段，冒号后面必须加空格，否则编译报错Error: Invalid YAML front matter
+#q:此字段会被Liquid添加到对象page
+title: title
+---
+
 <!DOCTYPE html>
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>q-jekyll</title>
+    <title>{% if page.title %} {{ page.title }} {% else %} q-jekyll {% endif %}</title>
+    <style>
+        pre {
+            background: #ccc;
+        }
+    </style>
 </head>
 
 <body>
+    <pre>{{ page }}</pre>
     <h1>hello jekyll</h1>
+    <h1>{{ "jekyll" | capitalize }}</h1>
+    <h1></h1>
 </body>
 
 </html>
