@@ -1,0 +1,22 @@
+---
+---
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>{% if page.title %} {{ page.title }} {% else %} q-jekyll {% endif %}</title>
+    <style>
+        pre {
+            background: #ccc;
+            white-space: pre-wrap;
+        }
+    </style>
+</head>
+
+<body>
+    <pre>{{ page }}</pre>
+    {{ content }}
+</body>
+
+</html>
