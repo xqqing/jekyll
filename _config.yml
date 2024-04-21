@@ -2,4 +2,7 @@
 collections:
   authors:
 
+#q:GP托管子目录需要配置
+domain: xqqing.github.io
+url: https://xqqing.github.io
 baseurl: /jekyll/
